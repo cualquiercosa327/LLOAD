@@ -69,7 +69,7 @@ static uint16_t saturn_read(void) {
 * Off     Off     Z     Y     X     R  (Delay 1us  after setting S0/S1. Delay 64us after reading data)
 * On     On         -     -     -     L  (Delay 90us after setting S0/S1)
 */
-	
+	_delay_ms(16);
 	// Reading Up, Down, Left, Right
 	bit_clear(PORTF, 1 << 1);
 	bit_set(PORTF, 1 << 5);
